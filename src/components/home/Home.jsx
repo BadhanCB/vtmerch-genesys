@@ -1,9 +1,11 @@
+import BestSelling from "./BestSelling/BestSelling";
 import TopBanner from "./TopBanner/TopBanner";
 
 const Home = () => {
     return (
-        <main>
+        <main className="font-inter">
             <TopBanner />
+            <BestSelling />
         </main>
     );
 };
