@@ -7,7 +7,7 @@ const HamburgerBtn = () => {
                 viewBox="0 0 40 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-10 h-10"
+                className="w-5 md:w-6 lg:w-7 xl:w-8 2xl:w-10 h-5 md:h-6 lg:h-7 xl:h-8 2xl:h-10"
             >
                 <g clipPath="url(#clip0_0_53)">
                     <path

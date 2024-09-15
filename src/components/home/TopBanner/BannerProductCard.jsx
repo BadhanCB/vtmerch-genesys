@@ -1,10 +1,16 @@
 // eslint-disable-next-line react/prop-types
 const BannerProductCard = ({ product, title, originalPrice, offerPrice }) => {
     return (
-        <div>
-            <img src={product} alt={title} className="rounded-xl" />
+        <div className="snap-center select-none">
+            <img
+                src={product}
+                alt={title}
+                className="rounded-xl"
+                draggable={false}
+            />
             <div className="text-white mt-3">
                 <h3 className="text-base capitalize">{title}</h3>
+                {/* price area */}
                 <div className="flex gap-4">
                     {/* show offer Price, if avilable */}
                     {offerPrice && (
