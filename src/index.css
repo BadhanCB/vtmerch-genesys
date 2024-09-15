@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "ActOfRejection";
+        src: local("ActOfRejection"),
+            url("./assets/fonts/act_of_rejection/Act_Of_Rejection.ttf")
+                format("truetype");
+    }
+    @font-face {
+        font-family: "Inter";
+        src: local("Inter"),
+            url("./assets/fonts/inter/Inter-VariableFont_wght.ttf")
+                format("truetype");
+    }
+    @font-face {
+        font-family: "InterItalic";
+        src: local("InterItalic"),
+            url("./assets/fonts/inter/Inter-Italic-VariableFont_wght.ttf")
+                format("truetype");
+    }
+    @font-face {
+        font-family: "Montserrat";
+        src: local("Montserrat"),
+            url("./assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf")
+                format("truetype");
+    }
+    @font-face {
+        font-family: "MontserratItalic";
+        src: local("MontserratItalic"),
+            url("./assets/fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+                format("truetype");
+    }
+}

@@ -2,7 +2,15 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                "act-of-rejection": ['"ActOfRejection", "sans-serif"'],
+                inter: ['"Inter", "sans-serif"'],
+                "inter-italic": ['"InterItalic", "sans-serif"'],
+                montserrat: ['"Montserrat", "sans-serif"'],
+                "montserrat-italic": ['"MontserratItalic", "sans-serif"'],
+            },
+        },
     },
     plugins: [],
 };
