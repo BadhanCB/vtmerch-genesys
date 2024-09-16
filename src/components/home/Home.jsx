@@ -1,4 +1,5 @@
 import BestSelling from "./BestSelling/BestSelling";
+import SignedCollection from "./SignedCollection/SignedCollection";
 import TopBanner from "./TopBanner/TopBanner";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <main className="font-inter">
             <TopBanner />
             <BestSelling />
+            <SignedCollection />
         </main>
     );
 };
