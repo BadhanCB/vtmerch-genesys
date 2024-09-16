@@ -2,7 +2,7 @@ const AboutContent = () => {
     return (
         <table>
             <tr className="border-b-[0.5px] border-white/50">
-                <td className="font-medium text-white opacity-80 pt-20 pb-6">
+                <td className="font-medium text-white opacity-80 pt-8 md:pt-12 lg:pt-20 pb-6">
                     <span className="font-montserrat text-[2rem]">
                         Leadership
                     </span>{" "}
@@ -12,7 +12,7 @@ const AboutContent = () => {
                 </td>
             </tr>
             <tr className="border-b-[0.5px] border-white/50">
-                <td className="font-medium text-white opacity-80 pt-12 pb-6">
+                <td className="font-medium text-white opacity-80 pt-8 md:pt-12 pb-6">
                     <span className="font-montserrat text-[2rem]">
                         Entrepreneurs
                     </span>{" "}
@@ -22,7 +22,7 @@ const AboutContent = () => {
                 </td>
             </tr>
             <tr className="border-b-[0.5px] border-white/50">
-                <td className="font-medium text-white opacity-80 pt-12 pb-6">
+                <td className="font-medium text-white opacity-80 pt-8 md:pt-12 pb-6">
                     <span className="font-montserrat text-[2rem]">
                         Capitalism
                     </span>{" "}
@@ -31,7 +31,7 @@ const AboutContent = () => {
                 </td>
             </tr>
             <tr className="border-b-[0.5px] border-white/50">
-                <td className="font-medium text-white opacity-80 pt-12 pb-6">
+                <td className="font-medium text-white opacity-80 pt-8 md:pt-12 pb-6">
                     <span className="font-montserrat text-[2rem]">Debate</span>{" "}
                     is welcome and necessary as it can lead to consensus,
                     epiphanies, and expose the truth. When a clash of ideas,
