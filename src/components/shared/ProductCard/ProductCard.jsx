@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-const BestSellingProductCard = ({ productImg, title, price, offerPrice }) => {
+const ProductCard = ({ productImg, title, price, offerPrice }) => {
     return (
         <div className="bg-white p-3 rounded-xl">
             <img src={productImg} alt={title} className="rounded-lg" />
@@ -43,4 +43,4 @@ const BestSellingProductCard = ({ productImg, title, price, offerPrice }) => {
         </div>
     );
 };
-export default BestSellingProductCard;
+export default ProductCard;

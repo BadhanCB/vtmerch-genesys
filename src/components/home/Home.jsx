@@ -1,5 +1,6 @@
 import BestSelling from "./BestSelling/BestSelling";
 import CompanySlogan from "./CompanySlogan/CompanySlogan";
+import NewArrival from "./NewArrival/NewArrival";
 import SignedCollection from "./SignedCollection/SignedCollection";
 import TopBanner from "./TopBanner/TopBanner";
 
@@ -10,6 +11,7 @@ const Home = () => {
             <BestSelling />
             <SignedCollection />
             <CompanySlogan />
+            <NewArrival />
         </main>
     );
 };
