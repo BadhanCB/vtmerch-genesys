@@ -46,4 +46,33 @@
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
+    .stroke-text {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 0.75px;
+    }
+    @media screen and (min-width: 640px) {
+        .stroke-text {
+            -webkit-text-stroke-width: 1px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .stroke-text {
+            -webkit-text-stroke-width: 1.25px;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .stroke-text {
+            -webkit-text-stroke-width: 1.5px;
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        .stroke-text {
+            -webkit-text-stroke-width: 1.75px;
+        }
+    }
+    @media screen and (min-width: 1536px) {
+        .stroke-text {
+            -webkit-text-stroke-width: 2px;
+        }
+    }
 }

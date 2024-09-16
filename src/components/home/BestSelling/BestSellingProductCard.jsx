@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 const BestSellingProductCard = ({ productImg, title, price, offerPrice }) => {
     return (
-        <div className="bg-white p-2 rounded-2xl">
+        <div className="bg-white p-3 rounded-xl">
             <img src={productImg} alt={title} className="rounded-lg" />
             <div className="mt-2">
                 <h3 className="text-base font-semibold capitalize">{title}</h3>
