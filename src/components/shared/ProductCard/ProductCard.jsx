@@ -1,8 +1,22 @@
-// eslint-disable-next-line react/prop-types
-const ProductCard = ({ productImg, title, price, offerPrice }) => {
+const ProductCard = ({
+    productImg,
+    title,
+    price,
+    offerPrice,
+    className,
+    imgClassName,
+}) => {
     return (
-        <div className="bg-white p-3 rounded-xl">
-            <img src={productImg} alt={title} className="rounded-lg" />
+        <div className={`bg-white p-3 rounded-xl shadow-lg ${className}`}>
+            <div
+                className={`rounded-lg w-full overflow-hidden ${imgClassName}`}
+            >
+                <img
+                    src={productImg}
+                    alt={title}
+                    className="w-full h-auto object-cover"
+                />
+            </div>
             <div className="mt-2">
                 <h3 className="text-base font-semibold capitalize">{title}</h3>
                 <div className="flex items-center gap-2">
