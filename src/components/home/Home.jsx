@@ -1,3 +1,4 @@
+import About from "./About/About";
 import BestSelling from "./BestSelling/BestSelling";
 import CompanySlogan from "./CompanySlogan/CompanySlogan";
 import FutureLooks from "./FutureLooks/FutureLooks";
@@ -14,6 +15,7 @@ const Home = () => {
             <CompanySlogan />
             <NewArrival />
             <FutureLooks />
+            <About />
         </main>
     );
 };
