@@ -47,7 +47,11 @@
         display: none;
     }
     .stroke-text {
-        -webkit-text-fill-color: transparent;
+        /* -webkit-text-fill-color: transparent; */
+        font-stretch: 0%;
+        color: #f6f5f5;
+        paint-order: stroke fill;
+        -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 0.75px;
     }
     @media screen and (min-width: 640px) {
