@@ -2,7 +2,7 @@
 const SectionLayout = ({ children, className }) => {
     return (
         <section
-            className={`px-4 md:px-12 lg:px-16 xl:px-20 2xl:px-[5.625rem] py-6 lg:py-8 xl:py-10 2xl:py-12 ${className}`}
+            className={`px-4 sm:px-12 md:px-16 lg:px-24 xl:px-28 2xl:px-[9.25rem] py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-[6.3125rem] ${className}`}
         >
             {children}
         </section>

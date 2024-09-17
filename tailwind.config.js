@@ -10,6 +10,9 @@ export default {
                 montserrat: ['"Montserrat", "sans-serif"'],
                 "montserrat-italic": ['"MontserratItalic", "sans-serif"'],
             },
+            maxWidth: {
+                "screen-3xl": "1920px",
+            },
         },
     },
     plugins: [],
