@@ -1,9 +1,11 @@
 const ProductQuantity = () => {
     return (
         <div className="font-inter">
-            <div className="text-xl font-medium mb-4">Quantity:</div>
+            <div className="text-lg lg:text-xl xl:text-2xl font-medium mb-2 lg:mb-4">
+                Quantity:
+            </div>
             <div className="flex">
-                <div className="px-4 py-2 border-[0.5px] border-[#27231280]/50 uppercase flex items-center">
+                <div className="px-2 md:px-3 lg:px-4 py-1 md:py-2 border-[0.5px] border-[#27231280]/50 uppercase flex items-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -17,10 +19,10 @@ const ProductQuantity = () => {
                         />
                     </svg>
                 </div>
-                <div className="px-4 py-2 border-[0.5px] border-[#27231280]/50 uppercase">
+                <div className="px-2 md:px-3 lg:px-4 py-1 md:py-2 border-[0.5px] border-[#27231280]/50 uppercase">
                     1
                 </div>
-                <div className="px-4 py-2 border-[0.5px] border-[#27231280]/50 uppercase flex items-center">
+                <div className="px-2 md:px-3 lg:px-4 py-1 md:py-2 border-[0.5px] border-[#27231280]/50 uppercase flex items-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"

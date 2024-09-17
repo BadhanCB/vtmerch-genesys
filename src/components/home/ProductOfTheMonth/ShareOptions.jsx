@@ -1,7 +1,9 @@
 const ShareOptions = () => {
     return (
         <div className="flex gap-3">
-            <p className="text-xl font-medium font-inter">Share:</p>
+            <p className="text-lg lg:text-xl xl:text-2xl font-medium font-inter">
+                Share:
+            </p>
             <div className="flex gap-3">
                 <button>
                     <svg

@@ -9,7 +9,7 @@ import ViewDetails from "./ViewDetails";
 
 const ProductInfo = () => {
     return (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col justify-center gap-4 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-8">
             <ProductName />
 
             <ProductDescription />
