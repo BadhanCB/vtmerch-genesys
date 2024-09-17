@@ -5,6 +5,7 @@ import CompanySlogan from "./CompanySlogan/CompanySlogan";
 import FutureLooks from "./FutureLooks/FutureLooks";
 import NewArrival from "./NewArrival/NewArrival";
 import Services from "./Services/Services";
+import ShopCollection from "./ShopCollection/ShopCollection";
 import SignedCollection from "./SignedCollection/SignedCollection";
 import TopBanner from "./TopBanner/TopBanner";
 
@@ -15,6 +16,7 @@ const Home = () => {
             <BestSelling />
             <SignedCollection />
             <CompanySlogan />
+            <ShopCollection />
             <NewArrival />
             <FutureLooks />
             <About />
