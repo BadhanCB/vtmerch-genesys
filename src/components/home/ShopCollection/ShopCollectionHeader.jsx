@@ -2,8 +2,8 @@ import RegularButton from "../../shared/RegularButton/RegularButton";
 
 const ShopCollectionHeader = () => {
     return (
-        <div className="bg-red-400 col-span-6 row-span-5">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold uppercase w-1/2 mb-12">
+        <div className="col-span-12 row-span-2 md:col-span-8 lg:col-span-6 md:row-span-3 lg:row-span-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold uppercase md:w-1/2 mb-2 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-6 2xl:mb-7">
                 Shop{" "}
                 <span className="stroke-text stroke-text-white text-[#191818]">
                     Collection
