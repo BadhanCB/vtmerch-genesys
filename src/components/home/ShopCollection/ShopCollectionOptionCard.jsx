@@ -4,7 +4,7 @@ const ShopCollectionOptionCard = ({ title, image, className }) => {
         <div
             className={`transition-all duration-700 relative overflow-hidden p-4 rounded-xl flex justify-center items-end ${className}`}
         >
-            <h3 className="relative z-10 text-lg xl:text-2xl 2xl:text-3xl text-center font-semibold xl:font-bold">
+            <h3 className="relative z-10 text-lg xl:text-xl 2xl:text-3xl text-center font-semibold xl:font-bold uppercase">
                 {title}
             </h3>
             <img

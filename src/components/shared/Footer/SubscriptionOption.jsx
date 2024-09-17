@@ -1,3 +1,5 @@
+import NarrowButton from "../NarrowButton/NarrowButton";
+
 const SubscriptionOption = () => {
     return (
         <div>
@@ -12,9 +14,9 @@ const SubscriptionOption = () => {
                 id="email"
                 placeholder="Enter your email"
             />
-            <button className="px-6 py-3 rounded-xl bg-white text-[#222222] text-base block w-full">
+            <NarrowButton className="block bg-white text-[#222222]">
                 Subscribe
-            </button>
+            </NarrowButton>
         </div>
     );
 };

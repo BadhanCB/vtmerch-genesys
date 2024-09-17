@@ -1,4 +1,4 @@
-import chessImg from "../../../assets/img/golden-chess-queen-shines-blurred-board bg 1 1.png";
+import chessImg from "../../../assets/img/img (3).png";
 import AboutContent from "./AboutContent";
 import AboutMedia from "./AboutMedia";
 import AboutTitle from "./AboutTitle";
