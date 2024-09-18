@@ -1,12 +1,12 @@
 // eslint-disable-next-line react/prop-types
 const BannerProductCard = ({ product, title, originalPrice, offerPrice }) => {
     return (
-        <div className="snap-center select-none hover:bg-orange-400/50 hover:shadow-xl rounded-xl hover:p-4 group transition duration-700">
-            <div className="w-full h-auto rounded-xl overflow-hidden transition duration-700">
+        <div className="snap-center select-none rounded-xl group transition duration-700">
+            <div className="w-full aspect-square rounded-xl hover:shadow-xl overflow-hidden transition duration-700">
                 <img
                     src={product}
                     alt={title}
-                    className="w-full h-full object-contain object-center group-hover:scale-125 transition duration-700"
+                    className="w-full h-full object-cover object-center group-hover:scale-125 transition duration-700"
                     draggable={false}
                 />
             </div>

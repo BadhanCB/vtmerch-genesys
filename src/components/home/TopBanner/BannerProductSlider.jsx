@@ -1,4 +1,7 @@
 import { useRef } from "react";
+import product2 from "../../../assets/img/img (10).png";
+import product3 from "../../../assets/img/img (11).jpeg";
+import product4 from "../../../assets/img/img (11).png";
 import product1 from "../../../assets/img/img (9).png";
 import BannerProductCard from "./BannerProductCard";
 
@@ -43,7 +46,18 @@ const BannerProductSlider = () => {
                 offerPrice={34.95}
             />
             <BannerProductCard
-                product={product1}
+                product={product2}
+                title="army green active short slave"
+                originalPrice={34.95}
+            />
+            <BannerProductCard
+                product={product3}
+                title="army green active short slave"
+                originalPrice={43.59}
+                offerPrice={34.95}
+            />
+            <BannerProductCard
+                product={product4}
                 title="army green active short slave"
                 originalPrice={34.95}
             />
@@ -54,23 +68,12 @@ const BannerProductSlider = () => {
                 offerPrice={34.95}
             />
             <BannerProductCard
-                product={product1}
+                product={product2}
                 title="army green active short slave"
                 originalPrice={34.95}
             />
             <BannerProductCard
-                product={product1}
-                title="army green active short slave"
-                originalPrice={43.59}
-                offerPrice={34.95}
-            />
-            <BannerProductCard
-                product={product1}
-                title="army green active short slave"
-                originalPrice={34.95}
-            />
-            <BannerProductCard
-                product={product1}
+                product={product3}
                 title="army green active short slave"
                 originalPrice={43.59}
                 offerPrice={34.95}
