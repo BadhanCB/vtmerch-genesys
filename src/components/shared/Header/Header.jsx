@@ -6,6 +6,8 @@ import NavLinks from "./NavLinks";
 const Header = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolledDown, setIsScrolledDown] = useState(false);
+    let lastScrollY = window.scrollY;
 
     const changeNavbarBG = () => {
         if (window.scrollY >= 100) {
@@ -13,13 +15,25 @@ const Header = () => {
         } else {
             setIsScrolled(false);
         }
+
+        if (window.scrollY >= 500) {
+            lastScrollY < window.scrollY
+                ? setIsScrolledDown(true)
+                : setIsScrolledDown(false);
+
+            lastScrollY = window.scrollY;
+        } else {
+            setIsScrolledDown(false);
+        }
     };
 
     window.addEventListener("scroll", changeNavbarBG);
 
     return (
         <header
-            className={`px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] fixed w-full z-30 transition-all duration-700 ${
+            className={`px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] fixed w-full z-30 transition-all duration-500 ${
+                isScrolledDown ? "-top-full" : "-top-0"
+            } ${
                 isScrolled
                     ? "bg-[#EA2127] shadow-lg py-2 md:py-3 lg:py-4 xl:py-6 2xl:py-8"
                     : "bg-transparent py-2 md:py-4 lg:py-6 xl:py-8 2xl:py-10"
