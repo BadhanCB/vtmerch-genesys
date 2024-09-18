@@ -1,4 +1,5 @@
 import chessImg from "../../../assets/img/img (3).png";
+import companyLogo from "../../../assets/logo/valuetainment.svg";
 import AboutContent from "./AboutContent";
 import AboutMedia from "./AboutMedia";
 import AboutTitle from "./AboutTitle";
@@ -11,6 +12,15 @@ const About = () => {
                 <AboutMedia />
                 <AboutContent />
             </div>
+
+            {/* logo image */}
+            <img
+                src={companyLogo}
+                alt="company logo"
+                className="w-64 md:w-72 lg:w-80 xl:w-96 2xl:w-[30rem] absolute top-8 right-8 opacity-5"
+            />
+
+            {/* chess image */}
             <img
                 src={chessImg}
                 alt="chess image"

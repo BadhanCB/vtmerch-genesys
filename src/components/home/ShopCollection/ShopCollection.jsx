@@ -4,13 +4,20 @@ import bossCollectionImg from "../../../assets/img/img (3).jpeg";
 import headWearImg from "../../../assets/img/img (7).png";
 import accessoriesImg from "../../../assets/img/img (8).jpeg";
 import topsImg from "../../../assets/img/img (9).jpeg";
+import companyLogo from "../../../assets/logo/valuetainment.svg";
 import SectionLayout from "../../shared/SectionLayout/SectionLayout";
 import ShopCollectionHeader from "./ShopCollectionHeader";
 import ShopCollectionOptionCard from "./ShopCollectionOptionCard";
 
 const ShopCollection = () => {
     return (
-        <SectionLayout className="bg-gradient-to-b from-[#2C2A2A] to-black text-white font-montserrat h-[54.5625rem] grid grid-cols-12 grid-rows-12 gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+        <SectionLayout className="bg-gradient-to-b from-[#2C2A2A] to-black text-white font-montserrat h-[54.5625rem] grid grid-cols-12 grid-rows-12 gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 relative">
+            <img
+                src={companyLogo}
+                alt="company logo"
+                className="w-64 md:w-72 lg:w-80 xl:w-96 2xl:w-[30rem] absolute top-4 left-4 opacity-5"
+            />
+
             <ShopCollectionHeader />
 
             <ShopCollectionOptionCard
