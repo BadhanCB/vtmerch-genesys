@@ -19,8 +19,10 @@ const Header = () => {
 
     return (
         <header
-            className={`px-2 md:px-10 lg:px-12 xl:px-14 2xl:px-16 py-2 md:py-4 lg:py-6 xl:py-8 2xl:py-10 fixed w-full z-30 transition-all duration-700 ${
-                isScrolled ? "bg-[#EA2127] shadow-lg" : "bg-transparent"
+            className={`px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] fixed w-full z-30 transition-all duration-700 ${
+                isScrolled
+                    ? "bg-[#EA2127] shadow-lg py-2 md:py-3 lg:py-4 xl:py-6 2xl:py-8"
+                    : "bg-transparent py-2 md:py-4 lg:py-6 xl:py-8 2xl:py-10"
             }`}
         >
             <nav className="flex items-center justify-between">
@@ -37,8 +39,8 @@ const Header = () => {
                     <h1
                         className={`text-white uppercase font-extrabold font-montserrat tracking-widest transition-all duration-700 ${
                             isScrolled
-                                ? "text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
-                                : "text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+                                ? "text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] 2xl:text-6xl"
+                                : "text-4xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[7rem]"
                         }`}
                     >
                         vtmerch
@@ -51,6 +53,7 @@ const Header = () => {
                 <HamburgerBtn
                     isOpenMenu={isOpenMenu}
                     setIsOpenMenu={setIsOpenMenu}
+                    isScrolled={isScrolled}
                 />
             </nav>
         </header>
