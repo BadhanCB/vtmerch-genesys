@@ -4,7 +4,7 @@ import ProductCard from "../../shared/ProductCard/ProductCard";
 
 const BestSellingProductsList = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-3 xl:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <ProductCard
                 productImg={product1}
                 title="army green active short sleeve"

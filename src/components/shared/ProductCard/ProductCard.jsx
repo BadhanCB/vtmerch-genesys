@@ -7,14 +7,16 @@ const ProductCard = ({
     imgClassName,
 }) => {
     return (
-        <div className={`bg-white p-3 rounded-xl shadow-lg ${className}`}>
+        <div
+            className={`cursor-pointer bg-white p-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-95 group transition duration-700 ${className}`}
+        >
             <div
-                className={`rounded-lg w-full overflow-hidden ${imgClassName}`}
+                className={`rounded-lg w-full aspect-square overflow-hidden ${imgClassName}`}
             >
                 <img
                     src={productImg}
                     alt={title}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover group-hover:scale-125 transition duration-700"
                 />
             </div>
             <div className="mt-2">
