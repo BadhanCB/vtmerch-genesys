@@ -83,3 +83,60 @@
         }
     }
 }
+
+@layer utilities {
+    /* regular btn hover effect */
+    .btn-hover-effect-regular::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #9333ea;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.5s ease-in-out;
+    }
+    .btn-hover-effect-regular {
+        position: relative;
+        z-index: 1;
+    }
+    .btn-hover-effect-regular:hover::before {
+        transform: scaleX(1);
+    }
+
+    /* regular button arrow key animation */
+    @keyframes slide-right {
+        0% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        25% {
+            transform: translateX(50px);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        65% {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        75% {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .slide-right {
+        animation: slide-right 0.7s ease-in-out;
+        animation-iteration-count: 1;
+    }
+}

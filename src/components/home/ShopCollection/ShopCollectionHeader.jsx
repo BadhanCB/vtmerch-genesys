@@ -9,7 +9,7 @@ const ShopCollectionHeader = () => {
                     Collection
                 </span>
             </h2>
-            <RegularButton className="bg-slate-300">
+            <RegularButton className="bg-slate-300 group overflow-hidden">
                 shop now
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const ShopCollectionHeader = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="size-4 md:size-6"
+                    className="size-4 md:size-6 group-hover:slide-right"
                 >
                     <path
                         strokeLinecap="round"
