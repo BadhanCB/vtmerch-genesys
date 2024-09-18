@@ -14,7 +14,7 @@ const SubscriptionOption = () => {
                 id="email"
                 placeholder="Enter your email"
             />
-            <NarrowButton className="block bg-white text-[#222222]">
+            <NarrowButton className="block bg-white text-[#222222] hover:bg-green-500 hover:text-white">
                 Subscribe
             </NarrowButton>
         </div>

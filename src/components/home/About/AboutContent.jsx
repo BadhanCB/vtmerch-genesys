@@ -3,7 +3,7 @@ const AboutContent = () => {
         <table>
             <tbody>
                 <tr className="border-b-[0.5px] border-white/50">
-                    <td className="font-medium text-white opacity-80 pt-8 md:pt-12 lg:pt-20 pb-6">
+                    <td className="font-medium text-white opacity-80 pt-8 md:pt-12 lg:pt-20 pb-11">
                         <span className="font-montserrat text-[2rem]">
                             Leadership
                         </span>{" "}
