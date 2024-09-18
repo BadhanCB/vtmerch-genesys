@@ -64,10 +64,10 @@ const Header = () => {
                     isOpenMenu={isOpenMenu}
                     setIsOpenMenu={setIsOpenMenu}
                 />
+
                 <HamburgerBtn
                     isOpenMenu={isOpenMenu}
                     setIsOpenMenu={setIsOpenMenu}
-                    isScrolled={isScrolled}
                 />
             </nav>
         </header>
