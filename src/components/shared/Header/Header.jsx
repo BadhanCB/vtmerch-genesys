@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed w-full z-30 transition-all duration-1000 ease-in px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] ${
+            className={`fixed w-full z-30 transition-all duration-1000 ease-in-out px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] ${
                 isScrolledDown ? "-top-full" : "-top-0"
             } ${
                 isScrolled
@@ -42,17 +42,14 @@ const Header = () => {
         >
             <nav className="flex items-center justify-between">
                 <div className="flex items-center gap-1 md:gap-2 lg:gap-3">
+                    {/* brand logo */}
                     <img
                         src={logo}
                         alt="Brand logo"
-                        className={`transition-all duration-700 ${
-                            isScrolled
-                                ? "w-6 md:w-8 lg:w-10 xl:w-12 2xl:w-16"
-                                : "w-8 md:w-12 lg:w-14 xl:w-16 2xl:w-20"
-                        }`}
+                        className="transition-all duration-700 w-8 md:w-12 lg:w-14 xl:w-16 2xl:w-20"
                     />
                     {/* brand name  */}
-                    <BrandName isScrolled={isScrolled} />
+                    <BrandName />
                 </div>
                 <NavLinks
                     isOpenMenu={isOpenMenu}

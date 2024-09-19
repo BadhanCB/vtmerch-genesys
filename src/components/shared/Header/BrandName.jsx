@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const BrandName = ({ isScrolled }) => {
+const BrandName = () => {
     const brandNameRef = useRef();
     const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -46,11 +46,7 @@ const BrandName = ({ isScrolled }) => {
     return (
         <h1
             ref={brandNameRef}
-            className={`brand-name inline-block text-white uppercase font-extrabold font-montserrat tracking-widest transition-all duration-700 ${
-                isScrolled
-                    ? "text-2xl md:text-5xl lg:text-6xl xl:text-[2.75rem] 2xl:text-6xl"
-                    : "text-3xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[7rem]"
-            }`}
+            className="brand-name inline-block text-white uppercase font-extrabold font-montserrat tracking-widest transition-all duration-700 text-3xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[7rem]"
         >
             vtmerch
         </h1>
