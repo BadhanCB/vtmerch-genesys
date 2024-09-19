@@ -31,7 +31,7 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed w-full z-30 transition-all duration-700 ease-in-out px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] ${
+            className={`fixed w-full z-30 transition-all duration-1000 ease-in px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-[3.875rem] ${
                 isScrolledDown ? "-top-full" : "-top-0"
             } ${
                 isScrolled

@@ -4,7 +4,7 @@ import ProductCard from "../../shared/ProductCard/ProductCard";
 
 const FutureLooksProducts = () => {
     return (
-        <div className="col-start-1 col-end-13 lg:col-start-7 lg:col-end-13 2xl:col-start-6 2xl:col-end-13 grid grid-cols-1 md:grid-cols-2 gap-6 content-center">
+        <div className="col-start-1 col-end-13 lg:col-start-6 lg:col-end-13 2xl:col-start-6 2xl:col-end-13 grid grid-cols-1 md:grid-cols-2 gap-6 content-center">
             <ProductCard
                 title="FLB Shirt - Purple"
                 price={43.59}

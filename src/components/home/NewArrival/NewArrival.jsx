@@ -9,7 +9,7 @@ const NewArrival = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-montserrat font-semibold uppercase mb-6 md:mb-8 lg:mb-10 xl:mb-12 2xl:mb-14">
                 new arrival
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4 lg:gap-5 xl:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <ProductCard
                     title="army green short sleeve"
                     price={43.59}
