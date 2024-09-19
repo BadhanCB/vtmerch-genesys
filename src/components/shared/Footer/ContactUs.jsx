@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import emailImg from "../../../assets/icon/email 1.svg";
 import fbImg from "../../../assets/icon/facebook (4).svg";
 import instaImg from "../../../assets/icon/instagram-logo (1).svg";
@@ -6,9 +7,33 @@ import phoneImg from "../../../assets/icon/telephone (2) 1.svg";
 import twImg from "../../../assets/icon/twitter (4).svg";
 
 const ContactUs = () => {
+    const ref = useRef(null);
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                setIsIntersecting(entries[0].isIntersecting);
+
+                if (entries[0].isIntersecting) {
+                    observer.unobserve(entries[0].target);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(ref.current);
+    }, []);
+
     return (
-        <div>
-            {/* <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-2"> */}
+        <div
+            ref={ref}
+            className={`transition-all duration-700 ${
+                isIntersecting
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
+            }`}
+        >
             <h3 className="text-xl font-medium capitalize mb-6">Contact us</h3>
             <div className="flex flex-col gap-4">
                 <p>

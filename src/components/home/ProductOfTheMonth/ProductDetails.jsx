@@ -15,7 +15,7 @@ const ProductDetails = () => {
                     productDetailsObserver.unobserve(entries[0].target);
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.3 }
         );
 
         productDetailsObserver.observe(productDetailsRef.current);

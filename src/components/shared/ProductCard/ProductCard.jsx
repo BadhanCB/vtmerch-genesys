@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 const ProductCard = ({
     productImg,
     title,
@@ -6,9 +8,32 @@ const ProductCard = ({
     className,
     imgClassName,
 }) => {
+    const ref = useRef(null);
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                setIsIntersecting(entries[0].isIntersecting);
+
+                if (entries[0].isIntersecting) {
+                    observer.unobserve(entries[0].target);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(ref.current);
+    }, []);
+
     return (
         <div
-            className={`cursor-pointer bg-white p-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-95 group transition duration-700 ${className}`}
+            ref={ref}
+            className={`cursor-pointer bg-white p-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-95 group transition duration-700 ${className} ${
+                isIntersecting
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
+            }`}
         >
             <div
                 className={`rounded-lg w-full aspect-square overflow-hidden ${imgClassName}`}

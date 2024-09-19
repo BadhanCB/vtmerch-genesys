@@ -17,16 +17,19 @@ const Services = () => {
                 title="return"
                 content="The attention to detail is evident in every aspect of this backpack."
                 image={returnImg}
+                className="delay-[70ms]"
             />
             <ServiceCard
                 title="support"
                 content="The attention to detail is evident in every aspect of this backpack."
                 image={supportImg}
+                className="delay-[90ms]"
             />
             <ServiceCard
                 title="payment"
                 content="The attention to detail is evident in every aspect of this backpack."
                 image={paymentImg}
+                className="delay-[100ms]"
             />
         </SectionLayout>
     );

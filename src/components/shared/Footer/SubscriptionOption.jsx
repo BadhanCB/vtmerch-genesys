@@ -1,9 +1,34 @@
+import { useEffect, useRef, useState } from "react";
 import NarrowButton from "../NarrowButton/NarrowButton";
 
 const SubscriptionOption = () => {
+    const ref = useRef(null);
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                setIsIntersecting(entries[0].isIntersecting);
+
+                if (entries[0].isIntersecting) {
+                    observer.unobserve(entries[0].target);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(ref.current);
+    }, []);
+
     return (
-        <div className="col-span-12 lg:col-span-5 xl:col-span-5 2xl:col-span-4 mb-16 lg:mb-0">
-            {/* <div className="col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-5"> */}
+        <div
+            ref={ref}
+            className={`col-span-12 lg:col-span-5 xl:col-span-5 2xl:col-span-4 mb-16 lg:mb-0 transition-all duration-700 ${
+                isIntersecting
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
+            }`}
+        >
             <p className="text-2xl font-montserrat mb-12">
                 Subscribe and be the first to receive notifications about our
                 upcoming releases and the latest news.

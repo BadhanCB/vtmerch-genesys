@@ -1,7 +1,33 @@
+import { useEffect, useRef, useState } from "react";
+
 const Products = () => {
+    const ref = useRef(null);
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                setIsIntersecting(entries[0].isIntersecting);
+
+                if (entries[0].isIntersecting) {
+                    observer.unobserve(entries[0].target);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(ref.current);
+    }, []);
+
     return (
-        <div>
-            {/* <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-2"> */}
+        <div
+            ref={ref}
+            className={`transition-all duration-700 ${
+                isIntersecting
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
+            }`}
+        >
             <h3 className="text-xl font-medium capitalize mb-6">products</h3>
             <ul className="flex flex-col gap-4">
                 <li>
