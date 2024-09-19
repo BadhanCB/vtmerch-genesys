@@ -1,4 +1,3 @@
-import Footer from "../shared/Footer/Footer";
 import About from "./About/About";
 import BestSelling from "./BestSelling/BestSelling";
 import CompanySlogan from "./CompanySlogan/CompanySlogan";
@@ -23,7 +22,6 @@ const Home = () => {
             <About />
             <ProductOfTheMonth />
             <Services />
-            <Footer />
         </main>
     );
 };
