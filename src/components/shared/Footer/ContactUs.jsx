@@ -8,6 +8,7 @@ import twImg from "../../../assets/icon/twitter (4).svg";
 const ContactUs = () => {
     return (
         <div>
+            {/* <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-2"> */}
             <h3 className="text-xl font-medium capitalize mb-6">Contact us</h3>
             <div className="flex flex-col gap-4">
                 <p>

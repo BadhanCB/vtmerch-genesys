@@ -1,6 +1,7 @@
 const Products = () => {
     return (
         <div>
+            {/* <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-2"> */}
             <h3 className="text-xl font-medium capitalize mb-6">products</h3>
             <ul className="flex flex-col gap-4">
                 <li>

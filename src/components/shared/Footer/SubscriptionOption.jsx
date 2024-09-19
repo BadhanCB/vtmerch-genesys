@@ -2,7 +2,8 @@ import NarrowButton from "../NarrowButton/NarrowButton";
 
 const SubscriptionOption = () => {
     return (
-        <div>
+        <div className="col-span-12 lg:col-span-5 xl:col-span-5 2xl:col-span-4 mb-16 lg:mb-0">
+            {/* <div className="col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-5"> */}
             <p className="text-2xl font-montserrat mb-12">
                 Subscribe and be the first to receive notifications about our
                 upcoming releases and the latest news.

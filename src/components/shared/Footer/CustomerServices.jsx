@@ -1,6 +1,7 @@
 const CustomerServices = () => {
     return (
         <div>
+            {/* <div className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-2"> */}
             <h3 className="text-xl font-medium capitalize mb-6">
                 customer services
             </h3>
