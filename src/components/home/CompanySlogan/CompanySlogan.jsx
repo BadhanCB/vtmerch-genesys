@@ -12,7 +12,7 @@ const CompanySlogan = () => {
             />
 
             {/* Company Slogan */}
-            <p className="text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-5xl/[4rem] font-montserrat font-bold text-white uppercase w-full md:w-9/12 lg:w-8/12 xl:w-3/5 2xl:w-7/12">
+            <p className="text-lg md:text-xl/8 lg:text-2xl/9 xl:text-2xl/10 2xl:text-5xl/[4rem] font-montserrat font-bold text-white uppercase w-full md:w-9/12 lg:w-8/12 xl:w-3/5 2xl:w-7/12">
                 our mission is to enlighten, entertain and empower current and
                 future leaders around the world.
             </p>
