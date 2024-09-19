@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../../../assets/logo/valuetainment.svg";
+import BrandName from "./BrandName";
 import HamburgerBtn from "./HamburgerBtn";
 import NavLinks from "./NavLinks";
 
@@ -46,19 +47,12 @@ const Header = () => {
                         alt="Brand logo"
                         className={`transition-all duration-700 ${
                             isScrolled
-                                ? "w-6 md:w-5 lg:w-6 xl:w-8 2xl:w-12"
+                                ? "w-6 md:w-8 lg:w-10 xl:w-12 2xl:w-16"
                                 : "w-8 md:w-12 lg:w-14 xl:w-16 2xl:w-20"
                         }`}
                     />
-                    <h1
-                        className={`text-white uppercase font-extrabold font-montserrat tracking-widest transition-all duration-700 ${
-                            isScrolled
-                                ? "text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] 2xl:text-6xl"
-                                : "text-3xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[7rem]"
-                        }`}
-                    >
-                        vtmerch
-                    </h1>
+                    {/* brand name  */}
+                    <BrandName isScrolled={isScrolled} />
                 </div>
                 <NavLinks
                     isOpenMenu={isOpenMenu}
