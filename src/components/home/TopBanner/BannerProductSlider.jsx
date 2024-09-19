@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import product2 from "../../../assets/img/img (10).png";
 import product3 from "../../../assets/img/img (11).jpeg";
 import product4 from "../../../assets/img/img (11).png";
@@ -7,6 +7,7 @@ import BannerProductCard from "./BannerProductCard";
 
 const BannerProductSlider = () => {
     const sliderRef = useRef(null);
+    const [isIntersecting, setIsIntersecting] = useState(false);
 
     let isDraggin = false;
     let startX = 0;
@@ -31,13 +32,32 @@ const BannerProductSlider = () => {
         sliderRef.current.style.cursor = "pointer";
     };
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                setIsIntersecting(entries[0].isIntersecting);
+
+                if (entries[0].isIntersecting) {
+                    observer.unobserve(entries[0].target);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(sliderRef.current);
+    }, []);
+
     return (
         <div
             ref={sliderRef}
             onMouseDown={dragStart}
             onMouseMove={dragging}
             onMouseUp={dragEnd}
-            className="font-inter grid grid-cols-[repeat(1,_12rem)] md:grid-cols-[repeat(1,_16rem)] lg:grid-cols-[repeat(1,_19rem)] xl:grid-cols-[repeat(1,_21rem)] 2xl:grid-cols-[repeat(1,_357px)] auto-cols-[12rem] md:auto-cols-[16rem] lg:auto-cols-[19rem] xl:auto-cols-[21rem] 2xl:auto-cols-[357px] grid-flow-col overflow-x-auto hide-scrollbar gap-4 relative z-10 ml-8 md:ml-28 lg:ml-32 xl:ml-36 2xl:ml-44 cursor-pointer scroll-smooth snap-mandatory snap-x"
+            className={`font-inter grid grid-cols-[repeat(1,_12rem)] md:grid-cols-[repeat(1,_16rem)] lg:grid-cols-[repeat(1,_19rem)] xl:grid-cols-[repeat(1,_21rem)] 2xl:grid-cols-[repeat(1,_357px)] auto-cols-[12rem] md:auto-cols-[16rem] lg:auto-cols-[19rem] xl:auto-cols-[21rem] 2xl:auto-cols-[357px] grid-flow-col overflow-x-auto hide-scrollbar gap-4 relative z-10 ml-8 md:ml-28 lg:ml-32 xl:ml-36 2xl:ml-44 cursor-pointer scroll-smooth snap-mandatory snap-x transition-all duration-1000 ${
+                isIntersecting
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
+            }`}
         >
             <BannerProductCard
                 product={product1}
