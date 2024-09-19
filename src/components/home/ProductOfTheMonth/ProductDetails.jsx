@@ -15,7 +15,7 @@ const ProductDetails = () => {
                     productDetailsObserver.unobserve(entries[0].target);
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.35 }
         );
 
         productDetailsObserver.observe(productDetailsRef.current);
@@ -24,7 +24,7 @@ const ProductDetails = () => {
     return (
         <div
             ref={productDetailsRef}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-700 ${
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 ${
                 isIntersecting
                     ? "translate-y-0 opacity-100"
                     : "translate-y-12 opacity-0"
