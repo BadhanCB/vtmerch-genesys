@@ -1,6 +1,6 @@
 const ProductName = () => {
     return (
-        <h3 className="text-xl xl:text-2xl 2xl:text-[2rem] font-medium">
+        <h3 className="text-xl xl:text-2xl 2xl:text-[2rem] font-semibold">
             Premium Valuetainment Leather Backpack
         </h3>
     );

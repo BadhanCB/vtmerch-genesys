@@ -1,6 +1,6 @@
 const ProductPrice = () => {
     return (
-        <div className="text-lg lg:text-xl xl:text-2xl font-medium flex gap-2 items-center">
+        <div className="text-lg lg:text-xl xl:text-2xl font-semibold flex gap-2 items-center">
             <p>Price:</p>
             <p className="text-[#EA2127] flex items-center">
                 <svg

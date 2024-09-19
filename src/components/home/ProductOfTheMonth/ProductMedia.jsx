@@ -1,3 +1,4 @@
+import { useState } from "react";
 import productImg1 from "../../../assets/img/img (3).jpeg";
 import productImg3 from "../../../assets/img/img (4).png";
 import productImg2 from "../../../assets/img/img (6).png";
@@ -5,11 +6,21 @@ import productImg4 from "../../../assets/img/img (8).jpeg";
 import ThumbnailCard from "./ThumbnailCard";
 
 const ProductMedia = () => {
+    const [activeImg, setActiveImg] = useState(0);
+    const images = [productImg1, productImg2, productImg3, productImg4];
+
     return (
         <div className="flex flex-col xl:flex-row gap-8">
             <div className="order-2 xl:order-1 flex flex-row xl:flex-col gap-4 items-center justify-center">
                 {/* previous icon button  */}
-                <button className="-rotate-90 xl:-rotate-0">
+                <button
+                    onClick={() =>
+                        setActiveImg((prev) =>
+                            prev === 0 ? images.length - 1 : prev - 1
+                        )
+                    }
+                    className="-rotate-90 xl:-rotate-0 p-3 rounded-full text-slate-500 hover:bg-slate-200 hover:text-black"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -26,12 +37,24 @@ const ProductMedia = () => {
                     </svg>
                 </button>
                 {/* thumbnail images */}
-                <ThumbnailCard image={productImg1} />
-                <ThumbnailCard image={productImg2} />
-                <ThumbnailCard image={productImg3} />
-                <ThumbnailCard image={productImg4} />
+                {images.map((img, index) => (
+                    <ThumbnailCard
+                        image={img}
+                        index={index}
+                        activeImg={activeImg}
+                        setActiveImg={setActiveImg}
+                        key={index}
+                    />
+                ))}
                 {/* next icon button  */}
-                <button className="-rotate-90 xl:-rotate-0">
+                <button
+                    onClick={() =>
+                        setActiveImg((prev) =>
+                            prev === images.length - 1 ? 0 : prev + 1
+                        )
+                    }
+                    className="-rotate-90 xl:-rotate-0 p-3 rounded-full text-slate-500 hover:bg-slate-200 hover:text-black"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -49,7 +72,7 @@ const ProductMedia = () => {
                 </button>
             </div>
             <div className="order-1 xl:order-2 w-fit h-fit bg-white rounded-3xl overflow-hidden my-auto">
-                <img src={productImg1} alt="main image" />
+                <img src={images[activeImg]} alt="main image" />
             </div>
         </div>
     );
